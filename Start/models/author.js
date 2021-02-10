@@ -2,16 +2,34 @@ var mongoose = require('mongoose');
 
 console.log('Initializing author schema');
 
+//for Birthdate validation
+let minDate = new Date()
+minDate.setDate(minDate.getDate() - 1)
+
 var authorSchema = new mongoose.Schema({
-    /*
-    TODO: 1 - Schema authors vullen
-    - Firstname: Verplicht, String
-    - Lastname: Verplicht, String
-    - Birthdate: Verplicht, Date, voor vandaag
-    - Country: String, default: NL
-    - Ranking: Number, boven 0
-    - Books: Array van book id's
-    */
+
+    Firstname:{
+        type: String,
+        required: true,
+    },
+    Lastname:{
+        type: String,
+        required: true
+    },
+    Birthdate:{
+        type: Date,
+        required: true,
+        min: minDate
+    },
+    Country:{
+        type: String,
+        default: 'NL'
+    },
+    Ranking:{
+        type: Number,
+        min: 1
+    },
+    Books:[Number]
 });
 
 /*
