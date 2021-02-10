@@ -2,14 +2,29 @@ var mongoose = require('mongoose');
 
 console.log('Initializing books schema');
 
+let minDate = new Date();
+minDate.setDate(minDate.Date - 1)
+
 var bookSchema = new mongoose.Schema({
-    /*
-    TODO: 2 - Schema books vullen
-    - Title: Verplicht, String
-    - PublishDate: Verplicht, Date, voor vandaag
-    - Category: Verplicht, String
-    - Chapters: Array van JSNON { title, numberOfPages }
-    */
+
+    Title:{
+        type: String,
+        required: true
+    },
+    PublishDate:{
+        type: Date,
+        required: true,
+        min: minDate,
+    },
+    Category:{
+        type: String,
+        required: true,
+    },
+    Chapters:[{
+        title: String,
+        numberOfPages: Number,
+    }]
+
 });
 
 /*
