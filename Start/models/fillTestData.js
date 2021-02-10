@@ -7,7 +7,16 @@ let author_seed = [
 
 	// Vul hier je testdata voor authors in 
 	// In je /models/book.js staat welke velden je nodig hebt.
-	// {}, {}, {}
+    {
+        
+    }, 
+    {
+
+    }, 
+    {
+
+    }
+    
 ];
 
 let book_seed = [
