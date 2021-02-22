@@ -36,7 +36,7 @@ let book_seed = [
         title: 'Book 5',
         publishDate: new Date(2004, 01, 01),
         category: 'Roman',
-        chapters: [{ title: 'First', numberOfPages: 20 }, { title: 'Second', numberOfPages: 10 }, { title: 'Third', numberOfPages: 15 }]
+        chapters: [{ title: 'First', numberOfPages: 20 }, { title: 'Second', numberOfPages: 10 }, { title: 'Third', numberOfPages: 15 }],
     }
 ];
 
@@ -47,7 +47,7 @@ let author_seed = [
         birthDate: new Date(1980, 01, 01),
         country: 'EN',
         ranking: '5',
-        books: ['1', '4'],
+        books: ['1', '2'],
     },
     {
         firstName: 'Piet',
@@ -55,7 +55,7 @@ let author_seed = [
         birthDate: new Date(1985, 01, 01),
         country: 'US',
         ranking: '1',
-        books: ['2', '3'],
+        books: ['3', '5'],
     },
     {
         firstName: 'Karel',
@@ -63,7 +63,7 @@ let author_seed = [
         birthDate: new Date(1990, 01, 01),
         country: 'NL',
         ranking: '3',
-        books: [],
+        books: ['5'],
     }
 ];
 

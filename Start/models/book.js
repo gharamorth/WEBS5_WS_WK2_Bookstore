@@ -23,7 +23,18 @@ var bookSchema = new mongoose.Schema({
     Chapters:[{
         title: String,
         numberOfPages: Number,
-    }]
+    }],
+    TotalPages:{
+        type: Number,
+        min: 0,
+        default: ()=>{
+            let pages = 0;
+            for(chapter in chapters){
+                pages += chapter.numberOfPages
+            }
+            return pages
+        }
+    }
 
 });
 
